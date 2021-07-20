@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CepUserComponent {
   getCep: Array<any>;
+  storeCep = [''];
   constructor(private configService: ConfigService) {
     this.getCep = [];
   }
@@ -21,14 +22,9 @@ export class CepUserComponent {
       cep4: ceps.controls.cep4.value.toString(),
       cep5: ceps.controls.cep5.value.toString(),
     };
+    this.storeCep.push(data.cep1, data.cep2, data.cep3, data.cep4, data.cep5);
 
-    this.getCep = this.configService.getConfig(
-      data.cep1,
-      data.cep2,
-      data.cep3,
-      data.cep4,
-      data.cep5
-    );
+    this.getCep = this.configService.getConfig(this.storeCep);
     console.log(this.getCep);
   }
 }
