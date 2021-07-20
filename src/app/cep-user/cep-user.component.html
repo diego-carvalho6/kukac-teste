@@ -1,0 +1,49 @@
+<p>cep-user works!</p>
+<form #ceps="ngForm" (ngSubmit)="onSubmit(ceps)" class="form-horizontal">
+  <p>informe 5 CEP's</p>
+  <input
+    type="text"
+    name="cep1"
+    placeholder="type the cep"
+    class="form-control"
+    ngModel
+  />
+  <input
+    type="text"
+    name="cep2"
+    placeholder="type the cep"
+    class="form-control"
+    ngModel
+  />
+  <input
+    type="text"
+    name="cep3"
+    placeholder="type the cep"
+    class="form-control"
+    ngModel
+  />
+  <input
+    type="text"
+    name="cep4"
+    placeholder="type the cep"
+    class="form-control"
+    ngModel
+  />
+  <input
+    type="text"
+    name="cep5"
+    placeholder="type the cep"
+    class="form-control"
+    ngModel
+  />
+  <button type="submit">submit</button>
+</form>
+<ul>
+  <li *ngFor="let a of getCep">
+    <p *ngIf="a.erro">cep not found</p>
+    <p *ngIf="!a.erro">
+      cep:{{ a.cep }}, logradouro: {{ a.logradouro }}, bairro: {{ a.bairro }},
+      localidade: {{ a.localidade }}, ddd: {{ a.ddd }}, uf: {{ a.uf }}
+    </p>
+  </li>
+</ul>

@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: false,
+  API: 'https://viacep.com.br/',
+  BASE_URL: '/api',
 };

@@ -1,0 +1,50 @@
+{
+  "car": [
+    {
+      "model": "123",
+      "manufacterYear": "123",
+      "brand": "123",
+      "doorAmount": "2 ou 4"
+    }
+  ],
+  "motorcycle": [
+    {
+      "model": "123",
+      "manufacterYear": "123",
+      "brand": "123",
+      "wheels": 2,
+      "passagers": "1 ou 2"
+    },
+    {
+      "model": "aoibhwao",
+      "manufacterYear": "asdaw",
+      "brand": "adwdasd",
+      "doorAmount": "2 ou 4"
+    },
+    {
+      "model": "aoibhwao",
+      "manufacterYear": "asdaw",
+      "brand": "adwdasd",
+      "doorAmount": "2 ou 4"
+    },
+    {
+      "model": "aoibhwao",
+      "manufacterYear": "asdaw",
+      "brand": "adwdasd",
+      "wheels": 2,
+      "passagers": "1 ou 2"
+    },
+    {
+      "model": "aoibhwao",
+      "manufacterYear": "asdaw",
+      "brand": "adwdasd",
+      "doorAmount": "2 ou 4"
+    },
+    {
+      "model": "123",
+      "manufacterYear": "123",
+      "brand": "123",
+      "doorAmount": "2 ou 4"
+    }
+  ]
+}

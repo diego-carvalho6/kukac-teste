@@ -1,0 +1,33 @@
+<p>palindrome works!</p>
+
+<form
+  #getNumber="ngForm"
+  (ngSubmit)="onSubmit(getNumber)"
+  class="form-horizontal"
+>
+  <div class="form-group">
+    <input
+      type="number"
+      name="value1"
+      placeholder="digite o periodo inicial"
+      class="form-control"
+      ngModel
+    />
+  </div>
+  <div class="form-group">
+    <input
+      type="number"
+      name="value2"
+      placeholder="digite o periodo final"
+      class="form-control"
+      ngModel
+    />
+  </div>
+  <button type="submit">submmit</button>
+</form>
+<div *ngIf="isEqual"><p>por favor selecione numeros diferentes</p></div>
+<div *ngIf="returnResult.length > 1">
+  <ul>
+    <li *ngFor="let a of returnResult; let index = index">Something {{ a }}</li>
+  </ul>
+</div>

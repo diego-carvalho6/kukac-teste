@@ -1,0 +1,32 @@
+<p>money-back works!</p>
+<form
+  #getNumber="ngForm"
+  (ngSubmit)="onSubmit(getNumber)"
+  class="d-flex mx-auto flex-col"
+>
+  <div class="form-group flex-col mb-3">
+    <label for="purchase amount" class="form-label padding-b"
+      >purchase amount</label
+    >
+    <input
+      type="number"
+      name="purchaseAmount"
+      placeholder="Enter the purchase amount"
+      class="form-control"
+      ngModel
+    />
+  </div>
+  <div class="form-group">
+    <label for="amount paid" class="form-label padding-b">amount paid</label>
+    <input
+      type="number"
+      name="moneyGiven"
+      placeholder="Enter the amount paid"
+      class="form-control"
+      ngModel
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">submit</button>
+</form>
+
+<div>{{ resultReturn }}</div>

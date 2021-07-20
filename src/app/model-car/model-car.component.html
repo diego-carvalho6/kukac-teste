@@ -1,0 +1,49 @@
+<form
+  #vehicle="ngForm"
+  (ngSubmit)="onSubmit(vehicle)"
+  class="d-flex mx-auto flex-col"
+>
+  <div class="mb-3 flex-col">
+    <label for="inputModel" class="form-label padding-b">Model</label>
+    <input
+      type="text"
+      name="model"
+      placeholder="model"
+      class="form-control"
+      ngModel
+      required
+    />
+  </div>
+  <div class="mb-3 flex-col">
+    <label for="manufacterYear" class="form-label padding-b"
+      >year of manufacter</label
+    >
+    <input
+      required
+      type="text"
+      name="manufacterYear"
+      placeholder="year of manufacter"
+      class="form-control"
+      ngModel
+    />
+  </div>
+  <div class="mb-3 flex-col">
+    <label for="brand" class="form-label padding-b">vehicle brand</label>
+    <input
+      type="text"
+      name="brand"
+      placeholder="vehicle brand"
+      class="form-control"
+      ngModel
+    />
+  </div>
+  <div *ngIf="car">
+    <button (click)="changeVehicle()" class="ry">car</button>
+  </div>
+  <div *ngIf="!car">
+    <button (click)="changeVehicle()" class="ry">motorcycle</button>
+  </div>
+  <button type="submit" class="btn btn-primary">submit</button>
+</form>
+
+<div *ngIf="created">created</div>
