@@ -1,4 +1,3 @@
-<p>money-back works!</p>
 <form
   #getNumber="ngForm"
   (ngSubmit)="onSubmit(getNumber)"
@@ -16,7 +15,7 @@
       ngModel
     />
   </div>
-  <div class="form-group">
+  <div class="form-group flex-col mb-3">
     <label for="amount paid" class="form-label padding-b">amount paid</label>
     <input
       type="number"
@@ -29,4 +28,6 @@
   <button type="submit" class="btn btn-primary">submit</button>
 </form>
 
-<div>{{ resultReturn }}</div>
+<div *ngIf="resultReturn" class="result">
+  <p>{{ resultReturn }}</p>
+</div>

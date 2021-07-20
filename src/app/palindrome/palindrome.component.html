@@ -1,11 +1,10 @@
-<p>palindrome works!</p>
-
 <form
   #getNumber="ngForm"
   (ngSubmit)="onSubmit(getNumber)"
-  class="form-horizontal"
+  class="form-horizontal d-flex mx-auto flex-col"
 >
-  <div class="form-group">
+  <div class="form-group form-group flex-col mb-3">
+    <label for="Initial" class="form-label padding-b">Initial</label>
     <input
       type="number"
       name="value1"
@@ -14,7 +13,8 @@
       ngModel
     />
   </div>
-  <div class="form-group">
+  <div class="form-group form-group flex-col mb-3">
+    <label for="Final" class="form-label padding-b">Final</label>
     <input
       type="number"
       name="value2"
@@ -23,11 +23,15 @@
       ngModel
     />
   </div>
-  <button type="submit">submmit</button>
+  <button type="submit" class="btn btn-primary">submmit</button>
 </form>
-<div *ngIf="isEqual"><p>por favor selecione numeros diferentes</p></div>
+<div *ngIf="isEqual" class="error">
+  <p>please select diferente numbers!!</p>
+</div>
 <div *ngIf="returnResult.length > 1">
-  <ul>
-    <li *ngFor="let a of returnResult; let index = index">Something {{ a }}</li>
+  <ul class="list">
+    <li *ngFor="let a of returnResult; let index = index" class="result">
+      <span>{{ a }}</span>
+    </li>
   </ul>
 </div>
